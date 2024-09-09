@@ -6,7 +6,7 @@ import lombok.ToString;
 
 @Getter@Setter@ToString
 public class Member {
-    private int member_id;
+    private String member_id;
     private String password;
     private String username;
     private String email;
