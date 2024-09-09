@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
-<mapper namespace="com.lab4dx.inter_vehicle_communication_service.mapper.CustomizingSettingMapper">
+    <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+    <mapper namespace="com.lab4dx.inter_vehicle_communication_service.mapper.CustomizingSettingMapper">
     <select id="getSettingByMemberAndEmoji"
             resultType="com.lab4dx.inter_vehicle_communication_service.dto.CustomizingSetting">
         SELECT * FROM CUSTOMIZING_SETTING WHERE MEMBER_ID = #{memberId} AND EMOJI_ID = #{emojiId}
