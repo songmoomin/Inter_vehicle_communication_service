@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mapper namespace="com.lab4dx.inter_vehicle_communication_service.mapper.MemberMapper">
+
+    <!-- 사용자 ID로 회원 정보를 조회 -->
+    <select id="findById" parameterType="String" resultType="com.lab4dx.inter_vehicle_communication_service.dto.Member">
+        SELECT * FROM Member
+        WHERE member_id = #{memberId}
+    </select>
+
+    <!-- 새로운 회원을 삽입 -->
+    <insert id="insertMember" parameterType="com.lab4dx.inter_vehicle_communication_service.dto.Member">
+        INSERT INTO Member (member_id, password, username, phone_number)
+        VALUES (#{member_id}, #{password}, #{username}, #{phone})
+    </insert>
+
+</mapper>
