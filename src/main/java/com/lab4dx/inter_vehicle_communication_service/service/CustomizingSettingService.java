@@ -7,7 +7,7 @@ import java.util.List;
 
 @Service
 public interface CustomizingSettingService {
-    CustomizingSetting getSettingsByMemberAndEmoji(int memberId, int emojiId);
+    CustomizingSetting getSettingsByMemberAndEmoji(String memberId, int emojiId);
     List<CustomizingSetting> getAllSettings();
     void createSettings(CustomizingSetting customizingSetting);
     void updateSettings(CustomizingSetting customizingSetting);

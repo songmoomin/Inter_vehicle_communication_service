@@ -1,12 +1,17 @@
 package com.lab4dx.inter_vehicle_communication_service.mapper;
 
+import com.lab4dx.inter_vehicle_communication_service.dto.CustomizingSetting;
 import org.junit.jupiter.api.Test;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 
 import static org.junit.jupiter.api.Assertions.*;
 
 @SpringBootTest
 class CustomizingSettingMapperTest {
+
+    @Autowired
+    private CustomizingSettingMapper customizingSettingMapper;
 
     @Test
     void getSettingByMemberAndEmoji() {
@@ -18,6 +23,12 @@ class CustomizingSettingMapperTest {
 
     @Test
     void insertSetting() {
+        CustomizingSetting customizingSetting = new CustomizingSetting();
+        customizingSetting.setMemberId(2);  // 새로운 멤버 ID
+        customizingSetting.setEmojiId(2);   // 새로운 이모지 ID
+        customizingSetting.setMessage("Goodbye World");
+        customizingSetting.setImagePath("/images/emoji2.png");
+        customizingSetting.setEmojiColor("#00FF00");
     }
 
     @Test

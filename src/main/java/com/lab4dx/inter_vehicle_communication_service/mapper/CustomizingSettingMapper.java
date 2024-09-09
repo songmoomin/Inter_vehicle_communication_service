@@ -8,7 +8,7 @@ import java.util.List;
 @Mapper
 public interface CustomizingSettingMapper {
 
-        CustomizingSetting getSettingByMemberAndEmoji(int memberId, int emojiId);
+        CustomizingSetting getSettingByMemberAndEmoji(String memberId, int emojiId);
         List<CustomizingSetting> getAllSetting();
         void insertSetting(CustomizingSetting setting);
         void updateSetting(CustomizingSetting setting);
