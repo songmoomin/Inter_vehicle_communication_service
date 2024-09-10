@@ -5,9 +5,6 @@ import lombok.Setter;
 import lombok.ToString;
 
 @Getter@Setter@ToString
-public class Member {
-    private String member_id;
-    private String password;
-    private String username;
-    private String phone_number;
+public class Emoji {
+    private int emojiId;
 }
