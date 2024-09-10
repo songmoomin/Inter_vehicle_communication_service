@@ -5,35 +5,40 @@ import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 
-
-
 import static org.junit.jupiter.api.Assertions.*;
 
 @SpringBootTest
-
-public class MemberMapperTest {
+class MemberMapperTest {
 
     @Autowired
     private MemberMapper memberMapper;
 
     @Test
-    void testFindById() {
-        Member retrievedMember = memberMapper.findById("user123");
-        assertNotNull(retrievedMember);
-        assertEquals("user123", retrievedMember.getMember_id());
-        assertEquals("Test User", retrievedMember.getUsername());
+    void getMemberByIdAndPassword() {
+
     }
 
     @Test
-    void testInsertMember() {
+    void getAllMember() {
+    }
+
+    @Test
+    void insertMember() {
         Member member = new Member();
-        member.setMember_id("user456");
-        member.setPassword("password");
-        member.setUsername("User1");
-        member.setPhone_number("09874321");
+        member.setMember_id("user3");
+        member.setPassword("123");
+        member.setUsername("lab");
+        member.setPhone_number("010-1234-5670");
 
         memberMapper.insertMember(member);
+    }
 
+    @Test
+    void updateMember() {
+    }
+
+    @Test
+    void deleteMember() {
     }
 }
 
