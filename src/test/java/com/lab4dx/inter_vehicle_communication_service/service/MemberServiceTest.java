@@ -2,16 +2,13 @@ package com.lab4dx.inter_vehicle_communication_service.service;
 
 import com.lab4dx.inter_vehicle_communication_service.dto.Member;
 import com.lab4dx.inter_vehicle_communication_service.mapper.MemberMapper;
-import com.lab4dx.inter_vehicle_communication_service.service.MemberService;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
-import org.springframework.transaction.annotation.Transactional;
 
 import static org.junit.jupiter.api.Assertions.*;
 
 @SpringBootTest
-@Transactional
 public class MemberServiceTest {
 
     @Autowired

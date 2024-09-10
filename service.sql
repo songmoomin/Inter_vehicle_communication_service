@@ -33,7 +33,7 @@ CREATE TABLE c##lab4dx.Customizing_Setting(
 CREATE TABLE c##lab4dx.Default_Text(
     text_id VARCHAR(15) PRIMARY KEY ,
     text VARCHAR(100),
-    setiment VARCHAR(10)
+    sentiment VARCHAR(10)
 );
 
 CREATE TABLE c##lab4dx.Default_Setting(
@@ -42,5 +42,16 @@ CREATE TABLE c##lab4dx.Default_Setting(
     PRIMARY KEY (text_id, member_id),
     FOREIGN KEY (text_id) REFERENCES c##lab4dx.Default_Text(text_id),
     FOREIGN KEY (member_id) REFERENCES c##lab4dx.Member(member_id)
-)
+);
+
+INSERT INTO C##LAB4DX.MEMBER (member_id, password, username, phone_number)
+VALUES ('test135', 'password', 'Test User',  '1234567801');
+
+SELECT * FROM C##LAB4DX.MEMBER;
+
+
+SELECT * FROM (
+                  SELECT t.*
+                  FROM C##LAB4DX.MEMBER t
+              ) WHERE ROWNUM <= 501
 
